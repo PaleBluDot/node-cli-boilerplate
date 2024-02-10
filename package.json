@@ -1,12 +1,24 @@
 {
-	"name": "@palebludot/node-cli-boilerplate",
+	"name": "tool",
 	"version": "0.0.0",
 	"description": "Boilerplate for getting started on node cli tools.",
 	"author": "Pavel Sanchez",
 	"repository": "https://github.com/PaleBluDot/node-cli-boilerplate",
 	"license": "MIT",
+	"main": "index.js",
+	"bin": {
+		"tool": "./bin/index.js",
+		"psd-test": "./bin/index.js"
+	},
 	"scripts": {
 		"commit": "git cz"
+	},
+	"dependencies": {
+		"ajv": "^8.12.0",
+		"arg": "^5.0.2",
+		"better-ajv-errors": "^1.2.0",
+		"chalk": "^4.1.2",
+		"pkg-up": "^4.0.0"
 	},
 	"devDependencies": {
 		"@semantic-release/changelog": "^6.0.3",
