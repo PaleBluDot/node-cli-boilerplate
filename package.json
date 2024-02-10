@@ -5,7 +5,6 @@
 	"author": "Pavel Sanchez",
 	"repository": "https://github.com/PaleBluDot/node-cli-boilerplate",
 	"license": "MIT",
-	"private": true,
 	"scripts": {
 		"commit": "git cz"
 	},
