@@ -1,9 +1,9 @@
 {
 	"name": "@palebludot/node-cli-boilerplate",
 	"version": "0.0.0",
-	"description": "An HTML linter tool for parsing HTML emails.",
+	"description": "Boilerplate for getting started on node cli tools.",
 	"author": "Pavel Sanchez",
-	"repository": "https://github.com/PaleBluDot/htmlemail",
+	"repository": "https://github.com/PaleBluDot/node-cli-boilerplate",
 	"license": "MIT",
 	"private": true,
 	"scripts": {
