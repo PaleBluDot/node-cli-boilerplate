@@ -1,0 +1,35 @@
+{
+	"name": "@palebludot/node-cli-boilerplate",
+	"version": "0.0.0",
+	"description": "An HTML linter tool for parsing HTML emails.",
+	"author": "Pavel Sanchez",
+	"repository": "https://github.com/PaleBluDot/htmlemail",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"commit": "git cz"
+	},
+	"devDependencies": {
+		"@semantic-release/changelog": "^6.0.3",
+		"@semantic-release/git": "^10.0.1",
+		"commitizen": "^4.3.0",
+		"commitlint": "^18.4.4",
+		"conventional-changelog-conventionalcommits": "^7.0.2",
+		"cz-customizable": "^7.0.0",
+		"husky": "^8.0.3",
+		"semantic-release": "^21.0.9"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit-msg": "exec < /dev/tty && node_modules/.bin/cz --hook || true"
+		}
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-customizable"
+		},
+		"cz-customizable": {
+			"config": ".config/commitizen.config.js"
+		}
+	}
+}

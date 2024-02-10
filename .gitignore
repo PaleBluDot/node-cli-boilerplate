@@ -1,0 +1,20 @@
+# dependencies installed by npm
+/node_modules
+# package-lock.json
+
+# build artifacts
+.cache
+.netlify
+/dist
+/build
+
+# secrets and errors
+.env
+.sass-cache
+.log
+*.code-workspace
+
+# macOS related files
+.DS_Store
+.AppleDouble
+.LSOverride
