@@ -1,6 +1,6 @@
 {
 	"name": "tool",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"description": "Boilerplate for getting started on node cli tools.",
 	"author": "Pavel Sanchez",
 	"repository": "https://github.com/PaleBluDot/node-cli-boilerplate",
