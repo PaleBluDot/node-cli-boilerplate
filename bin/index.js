@@ -3,28 +3,34 @@ const logger = require('../src/logger')('bin');
 const arg = require('arg');
 const getConfig = require('../src/config/config-mgr');
 const start = require('../src/commands/start');
-const build = require('../src/commands/build');
-const usage = require('../src/commands/usage');
+const build = require('../src/commands/build'); // Import your build function
+const usage = require('../src/commands/flags/usage'); // Adjusted path
 
 try {
-	const args = arg({
-		'--start': Boolean,
-		'-s': '--start',
-		'--build': Boolean,
-		'-b': '--build',
-		'--help': Boolean,
-		'-h': '--help',
-	});
+	const args = arg(
+		{
+			'--help': Boolean,
+			'-h': '--help', // Map -h to --help
+		},
+		{
+			permissive: true,
+		}
+	);
 
-	logger.debug('Received args', args);
+	logger.debug('Received', args);
 
-	if (args['--start']) {
+	const command = args._[0]; // Get the command
+
+	if (command === 'start') {
 		const config = getConfig();
 		start(config);
-	} else if (args['--build']) {
+	} else if (command === 'build') {
 		const config = getConfig();
-		build(config);
-	} else if (args['--help']) {
+		build(config); // Call your build function
+	} else if (args['--help'] || !command) {
+		usage(); // Call usage function
+	} else {
+		console.log(`Unrecognized command: ${command}`);
 		usage();
 	}
 } catch (e) {
